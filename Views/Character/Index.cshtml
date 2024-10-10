@@ -1,0 +1,31 @@
+﻿@using SD_725_Final
+@using SD_725_Final.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SD_725_Final.Models.Character
+
+<h2>Create Your Character</h2>
+
+<form asp-action="GenerateCharacter" method="post">
+    <label>Name:</label>
+    <input type="text" asp-for="Name" required />
+    <br />
+
+    <label>Class:</label>
+    <select asp-for="SelectedClass" required />
+        @foreach(var className in ViewBag.Classes)
+    {
+        <option value="@className">@className</option>
+    }
+    </select>
+    <br />
+
+    <label>Race:</label>
+    <select asp-for="SelectedRace" required />
+        @foreach(var raceName in ViewBag.Races)
+        {
+            <option value="@raceName">@raceName</option>
+        }
+    </select>
+    <br />
+    <button type="submit">Generate Character</button>
+</form>

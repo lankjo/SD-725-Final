@@ -1,0 +1,26 @@
+﻿@using SD_725_Final
+@using SD_725_Final.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SD_725_Final.Models.Character
+
+<h2>Your D&D Character</h2>
+
+<p><strong>Name:</strong> @Model.Name</p>
+
+<p><strong>Class:</strong> @Model.SelectedClass</p>
+
+<p><strong>Race:</strong> @Model.SelectedRace</p>
+
+<p><strong>Strength:</strong> @Model.Strength</p>
+
+<p><strong>Dexterity:</strong> @Model.Dexterity</p>
+
+<p><strong>Constitution:</strong> @Model.Constitution</p>
+
+<p><strong>Intelligence:</strong> @Model.Intelligence</p>
+
+<p><strong>Wisdom:</strong> @Model.Wisdom</p>
+
+<p><strong>Charisma:</strong> @Model.Charisma</p>
+
+<a asp-action="Index">Create Another Character</a>
